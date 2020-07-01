@@ -1,0 +1,28 @@
+name: CI
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
+      - master
+
+jobs:
+  UI_Checks:
+    env:
+    runs-on: ubuntu-latest
+    steps:
+      ########################
+      ## SETUP ENV and DEPENDS
+      ########################
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: NPM Install
+        run: |
+          npm ci
+      - name: NPM success 
+        if: success()
+        run: | 
+          echo 'NPM install success'
