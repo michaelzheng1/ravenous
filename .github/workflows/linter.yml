@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v1
         with:
           node-version: '12'
       - name: Lint Code Base
@@ -21,7 +21,7 @@ jobs:
         if: failure()
         run: |
           npm install standard 
-          npx standard --fix
+          sudo npx standard --fix
           git config --global user.name 'Michael Zheng'
           git config --global user.email 'mzheng1@users.noreply.github.com'
           git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
