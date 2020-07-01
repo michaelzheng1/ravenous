@@ -20,7 +20,7 @@ jobs:
           echo success
       - name: Creates local changes
         id: standard
-        # if: failure()
+        if: always()
         run: |
           echo ::set-output name=changes::$( echo $(npm install -g standard)) 
           npx standard --fix
