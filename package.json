@@ -5,9 +5,12 @@
   "homepage": "https://michaelzheng1.github.io/ravenous",
   "dependencies": {
     "gh-pages": "^2.0.1",
+    "node-sass": "^4.14.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1",
+    "react-scripts": "^3.4.1",
+    "sass": "^1.26.9",
+    "typescript": "^3.9.5",
     "whatwg-fetch": "^3.0.0"
   },
   "scripts": {
@@ -32,5 +35,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
   }
 }
