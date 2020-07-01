@@ -1,20 +1,36 @@
 name: Lint Code Base
-
 on:
   push:
     branches-ignore:
       - 'master'
 jobs:
-  build:
+  builds:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Lint Code Base
-        uses: docker://github/super-linter:v3
-        env:
-          VALIDATE_ALL_CODEBASE: false
-      - name: Creates local changes
-        if: failure()
-        runs: |
-          npm install standard
-          standard --fix
+        with:
+          fetch-depth: 0
+
+      - name: echo hello
+        run: |
+          echo hello
+      - name: echo bye
+        run: |
+          echo bye
+
+
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#       - name: Lint Code Base
+#         uses: docker://github/super-linter:v3
+#         env:
+#           VALIDATE_ALL_CODEBASE: false
+#       - name: Creates local changes
+#         if: failure()
+#         runs: |
+#           npm install standard
+#           standard --fix
