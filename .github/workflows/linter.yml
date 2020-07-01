@@ -19,9 +19,10 @@ jobs:
         run: |
           echo success
       - name: Creates local changes
+        id: standard
         # if: failure()
         run: |
-          echo $(npm install -g standard) 
+          echo ::set-output name=changes::$( echo $(npm install -g standard)) 
           npx standard --fix
       # - name: Commit files
       #   if: failure()
