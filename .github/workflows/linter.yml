@@ -20,5 +20,5 @@ jobs:
       - name: Commit Changes
         # if: failure()
         run: |
-          npm install -g standard
-          standard --fix
+          npm install standard --global
+          npx standard --fix
