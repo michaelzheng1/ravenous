@@ -3,6 +3,8 @@ import './App.css';
 import BusinessList from './components/BusinessList/BusinessList';
 import SearchBar from './components/SearchBar/SearchBar';
 import Yelp from './util/Yelp';
+require('dotenv').config()
+
 
 class App extends React.Component {
   constructor(props) {

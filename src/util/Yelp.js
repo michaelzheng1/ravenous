@@ -1,4 +1,6 @@
-const apiKey = 'bRXKrAclkdWJJ-WvwK3LSbMhU46a6hKnLeUhNBpL9ioQyJNjWuOIz-zaOr8HuKTiBGJh-46wQqX7kSk0vRfSieUqOuZt-L8Ktfn6RJJNZg176hlEX644BocmIT7vXHYx';
+require('dotenv').config()
+
+const apiKey = process.env.REACT_APP_API_KEY;
 
 const Yelp = {
     searchYelp(term, location, sortBy) {
