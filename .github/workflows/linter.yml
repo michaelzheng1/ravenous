@@ -14,12 +14,14 @@ jobs:
         uses: docker://github/super-linter:v3
         env:
           VALIDATE_ALL_CODEBASE: false
-      - name: echo hello
+      - name: success 
+        if: success()
         run: |
-          echo hello
+          echo success
       - name: echo bye
+        if: failure()
         run: |
-          echo bye
+          echo failure
 
 
 
