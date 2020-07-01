@@ -20,7 +20,7 @@ jobs:
       - name: Commit Changes
         if: failure()
         run: |
-          npm install standard --global
+          npm install standard 
           npx standard --fix
           git config --global user.name 'Michael Zheng'
           git config --global user.email 'mzheng1@users.noreply.github.com'
