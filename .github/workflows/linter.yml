@@ -10,10 +10,13 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Lint Code Base
-        uses: docker://github/super-linter:v3
-        env:
-          VALIDATE_ALL_CODEBASE: false
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      # - name: Lint Code Base
+      #   uses: docker://github/super-linter:v3
+      #   env:
+      #     VALIDATE_ALL_CODEBASE: false
       - name: Commit Changes
         if: failure()
         run: |
