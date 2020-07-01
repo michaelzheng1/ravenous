@@ -20,18 +20,18 @@ jobs:
           echo success
       - name: Creates local changes
         if: failure()
-        runs: |
+        run: |
           npm install standard
           standard --fix
-      - name: Commit files
-        if: failure()
-        run: |
-          git config --global user.name 'Michael Zheng'
-          git config --global user.email 'mzheng1@users.noreply.github.com'
-          git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
-          git checkout "${GITHUB_REF:11}"
-          git commit -am "Automated report"
-          git push
+      # - name: Commit files
+      #   if: failure()
+      #   run: |
+      #     git config --global user.name 'Michael Zheng'
+      #     git config --global user.email 'mzheng1@users.noreply.github.com'
+      #     git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+      #     git checkout "${GITHUB_REF:11}"
+      #     git commit -am "Automated report"
+      #     git push
 
 
 
