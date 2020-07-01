@@ -21,4 +21,4 @@ jobs:
         # if: failure()
         run: |
           npm install -g standard
-          npx standard --fix
+          standard --fix
