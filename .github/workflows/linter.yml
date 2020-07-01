@@ -15,3 +15,16 @@ jobs:
         uses: docker://github/super-linter:v3
         env:
           VALIDATE_ALL_CODEBASE: false
+      - name: Creates local changes
+        if: failure()
+        runs: |
+          npm install standard
+          standard --fix
+      - name: Commit files
+        run: |
+          git config --global user.name 'Michael Zheng'
+          git config --global user.email 'mzheng1@users.noreply.github.com'
+          git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          git checkout "${GITHUB_REF:11}"
+          git commit -am "Automated report"
+          git push
