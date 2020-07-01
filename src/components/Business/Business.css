@@ -1,5 +1,5 @@
 .Business {
-  display: flex;
+  display:                 flex;
   flex-direction: column;
   justify-content: space-between;
   width: 16.66rem;
