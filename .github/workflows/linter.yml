@@ -18,7 +18,7 @@ jobs:
       #   env:
       #     VALIDATE_ALL_CODEBASE: false
       - name: Commit Changes
-        if: failure()
+        # if: failure()
         run: |
           npm install standard
           npx standard --fix
