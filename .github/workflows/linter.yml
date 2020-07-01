@@ -21,7 +21,7 @@ jobs:
       - name: Creates local changes
         # if: failure()
         run: |
-          echo $(npm install standard) 
+          echo $(npm install -g standard) 
           npx standard --fix
       # - name: Commit files
       #   if: failure()
