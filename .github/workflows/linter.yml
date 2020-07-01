@@ -22,7 +22,7 @@ jobs:
         id: standard
         if: always()
         run: |
-          echo ::set-output name=changes::$( echo $(npm install -g standard)) 
+          echo ::set-output name=changes::$( echo $(npm install standard)) 
           npx standard --fix
       # - name: Commit files
       #   if: failure()
