@@ -1,4 +1,9 @@
 import React from 'react'
+import {BrowserRouter as Router} from 'react-router-dom';
+import {Provider} from 'react-redux';
+//import Routes from './Routes';
+import store from './Redux/Store';
+
 // import './App.css'
 // import BusinessList from './components/BusinessList/BusinessList'
 // import SearchBar from './components/SearchBar/SearchBar'
@@ -20,13 +25,20 @@ class App extends React.Component {
   //   })
   // }
 
+      // <div className='App'>
+      //   <h1>ravenous</h1>
+      //   {/* <SearchBar searchYelp={this.searchYelp} />
+      //   <BusinessList businesses={this.state.businesses} /> */}
+      // </div>
+
   render () {
     return (
-      <div className='App'>
-        <h1>ravenous</h1>
-        {/* <SearchBar searchYelp={this.searchYelp} />
-        <BusinessList businesses={this.state.businesses} /> */}
-      </div>
+      <Provider store={store} >
+        <Router>
+          Ravenous
+        </Router>
+      </Provider>
+  
     )
   }
 }
