@@ -1,7 +1,7 @@
 import React from 'react'
 import {BrowserRouter as Router} from 'react-router-dom';
 import {Provider} from 'react-redux';
-//import Routes from './Routes';
+import Routes from './Routes';
 import store from './Redux/Store';
 
 // import './App.css'
@@ -36,6 +36,7 @@ class App extends React.Component {
       <Provider store={store} >
         <Router>
           Ravenous
+          <Routes />
         </Router>
       </Provider>
   
