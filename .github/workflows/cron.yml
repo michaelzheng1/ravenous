@@ -1,0 +1,17 @@
+name: NPM AUDIT CRON
+on:
+  schedule:
+    - cron: '00 14 * * 1-5'
+jobs:
+  builds:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - name: UI NPM Audit
+        run: |
+          npm audit --audit-level=moderate

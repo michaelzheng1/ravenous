@@ -1,8 +1,10 @@
 ## Ravenous
 
-A website where users can search, view and sort through restaurants with the Yelp API. Must enter both inputs in order to work.
+A SPA (Single page application) to search the best match and highest-rated restaurant with Yelp API. 
+Includes a schedule GitHub Action to audit any vulnerabilities in the
+dependencies configured in the application.
 
-This is a upgraded version from CodeAcademy using GitHub Action and React Hooks.
+This is a upgraded version from CodeAcademy using GitHub Action and Sass.
 
 ![Alt Text](https://github.com/michaelzheng1/website/blob/master/gif/ravenous.gif?raw=true)
 
@@ -31,3 +33,4 @@ npm start
 
 - React
 - Node
+- Github Actions

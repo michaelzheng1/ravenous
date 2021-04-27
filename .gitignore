@@ -15,3 +15,4 @@ dump.rdb
 /logs
 *.env
 */env.js
+*/node_modules
