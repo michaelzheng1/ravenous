@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 import Routes from './Routes';
 import store from './Redux/Store';
 
-// import './App.css'
+import './sass/main.scss';
 // import BusinessList from './components/BusinessList/BusinessList'
 // import SearchBar from './components/SearchBar/SearchBar'
 // import Yelp from './util/Yelp'

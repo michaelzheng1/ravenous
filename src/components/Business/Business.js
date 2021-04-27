@@ -1,6 +1,5 @@
 import React from 'react';
-// import './Business.sass';
-
+import '../../sass/components';
 
 const Business = (props) => {
     return (

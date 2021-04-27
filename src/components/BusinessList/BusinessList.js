@@ -1,6 +1,6 @@
 import React from 'react'
 import Business from '../Business/Business'
-// import './BusinessList.sass'
+import '../../sass/components/business'
 
 const BusinessList = (props) => {
   return (
