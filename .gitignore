@@ -16,3 +16,4 @@ dump.rdb
 *.env
 */env.js
 */node_modules
+package-lock.json
