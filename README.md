@@ -6,7 +6,7 @@ This is a upgraded version from CodeAcademy using GitHub Action and React Hooks.
 
 ![Alt Text](https://github.com/michaelzheng1/website/blob/master/gif/ravenous.gif?raw=true)
 
-### Development Setup
+### Development Setup (Requires Yelp API Key)
 
 To clone the project, open a terminal and run:
 
